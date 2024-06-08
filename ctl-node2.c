@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 void on_status_clicked(GtkWidget *widget, gpointer label) {
-    system("sudo virsh list --all | grep node2 | awk '{print $3}' > /tmp/.vm_status.txt");
-    FILE *fp = fopen("/tmp/.vm_status.txt", "r");
+    system("sudo virsh list --all | grep node2 | awk '{print $3}' > /tmp/.vm2_status.txt");
+    FILE *fp = fopen("/tmp/.vm2_status.txt", "r");
     if (fp) {
         char status[100];
         fgets(status, sizeof(status), fp);
